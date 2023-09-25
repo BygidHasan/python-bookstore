@@ -2,17 +2,17 @@
 
 Project: Bookstore
 
-##Description:
+## Description:
 
 This is a simple bookstore with login and signup abilities, built with Python and PyMongo for a local MongoDB database. Users who log in can create, edit, update, and delete book information. Users who do not log in can only see the list of books.
 
-##Features:
+## Features:
 
 Login and signup
 Create, edit, update, and delete book information (for logged-in users only)
 View list of books (for all users)
 
-##Usage:
+## Usage:
 
 To start the bookstore, run the following command in a terminal:
 python app.py
@@ -29,11 +29,11 @@ python app.py
 
 - To delete a book, click on the "Delete" button next to the book.
 
-##Installation:
+## Installation:
 
 This bookstore is a console application, simply just download the file and run the code in python terminal to view it
 
-##Prerequisites:
+## Prerequisites:
 
 Python 3
 PyMongo
