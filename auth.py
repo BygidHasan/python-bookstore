@@ -1,14 +1,18 @@
-import hashlib
-import os
+import bcrypt
 from db import users
 
 def hash_password(password):
-    return password
+    salt = bcrypt.gensalt()
+    hashed = bcrypt.hashpw(password.encode('utf-8'), salt)
+    return hashed
+
+def verifypw(input, hashed):
+    return bcrypt.checkpw(input.encode('utf-8'), hashed)
 
 def login(username, password):
     user = users.find_one({"username": username})
     
-    if user and user["password"] == hash_password(password):
+    if user and verifypw(password, user["password"]):
         return True
     else:
         return False
